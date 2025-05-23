@@ -1,4 +1,4 @@
-package com.jessica.buddy.ui.theme
+package com.jessica.buddy.core.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
