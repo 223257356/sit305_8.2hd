@@ -32,4 +32,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Buddy"
-include(":app", ":core")
+include(":app", ":core", ":features:auth")
