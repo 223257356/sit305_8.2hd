@@ -13,7 +13,13 @@
                 android:value="androidx.startup" />
         </provider>
         <activity
-            android:name=".presentation.AuthActivity"
-            android:exported="true"/>
+            android:name=".presentation.screen.AuthActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 </manifest>

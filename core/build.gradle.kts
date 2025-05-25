@@ -4,6 +4,7 @@ import java.io.FileInputStream
 plugins {
     id("com.sanjaya.buildlogic.lib")
     id("com.sanjaya.buildlogic.compose")
+    kotlin("plugin.serialization") version core.versions.kotlin.core
 }
 
 val localProperties = Properties().apply {
@@ -18,14 +19,8 @@ android {
 
         buildConfigField(
             "String",
-            "MOCK_BASE_URL",
-            "${localProperties.getProperty("MOCK_BASE_URL")}"
-        )
-
-        buildConfigField(
-            "String",
-            "PROD_BASE_URL",
-            "${localProperties.getProperty("PROD_BASE_URL")}"
+            "BASE_URL",
+            "${localProperties.getProperty("BASE_URL")}"
         )
     }
     buildFeatures {
