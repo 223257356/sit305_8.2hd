@@ -4,10 +4,10 @@ plugins {
 }
 
 android {
-    namespace = "com.jessica.buddy"
+    namespace = "com.jessica.buddy.app"
 
     defaultConfig {
-        applicationId = "com.jessica.buddy"
+        applicationId = "com.jessica.buddy.app"
         versionCode = libs.versions.version.code.get().toInt()
         versionName = libs.versions.version.name.get()
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

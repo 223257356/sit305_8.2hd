@@ -1,4 +1,4 @@
-package com.jessica.buddy
+package com.jessica.buddy.app
 
 import android.app.Application
 

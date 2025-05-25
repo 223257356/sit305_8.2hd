@@ -3,21 +3,29 @@ package com.jessica.buddy.core.presentation.theme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.ReadOnlyComposable
+import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
+import com.ramcosta.composedestinations.utils.rememberDestinationsNavigator
 
 @Composable
 fun BuddyTheme(
-    content: @Composable () -> Unit
+    content: @Composable (NavHostController) -> Unit
 ) {
+    val navController = rememberNavController()
     CompositionLocalProvider(
         LocalBuddyColors provides buddyColors,
         LocalBuddyTypography provides buddyTypography,
-        content = content
-    )
+        LocalBuddyNavigator provides navController.rememberDestinationsNavigator(),
+    ) {
+        content(navController)
+    }
 }
 
 object BuddyTheme {
@@ -31,6 +39,11 @@ object BuddyTheme {
         @Composable
         @ReadOnlyComposable
         get() = LocalBuddyTypography.current
+
+    val navigator: DestinationsNavigator
+        @Composable
+        @ReadOnlyComposable
+        get() = LocalBuddyNavigator.current
 }
 
 private val LocalBuddyColors = staticCompositionLocalOf { buddyColors }
@@ -47,6 +60,9 @@ private val buddyColors = BuddyColors(
     disabled = Color(0xFFDADBD6),
     neutral = Color(0xFFEFF0F6),
 )
+
+private val LocalBuddyNavigator =
+    compositionLocalOf<DestinationsNavigator> { error("No DestinationsNavigator provided") }
 
 private val LocalBuddyTypography = staticCompositionLocalOf { buddyTypography }
 

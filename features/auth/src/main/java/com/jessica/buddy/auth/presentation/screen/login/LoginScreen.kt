@@ -14,14 +14,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.jessica.buddy.auth.presentation.navigation.AuthGraph
 import com.jessica.buddy.auth.presentation.screen.login.LoginScreenEvent.LoginFailed
 import com.jessica.buddy.auth.presentation.screen.login.LoginScreenEvent.LoginSuccess
 import com.jessica.buddy.core.presentation.component.button.BuddyButton
 import com.jessica.buddy.core.presentation.component.button.ButtonType
+import com.ramcosta.composedestinations.annotation.Destination
 import org.koin.androidx.compose.koinViewModel
 import org.orbitmvi.orbit.compose.collectAsState
 import org.orbitmvi.orbit.compose.collectSideEffect
 
+@Destination<AuthGraph>(start = true)
 @Composable
 fun LoginScreen(
     modifier: Modifier = Modifier,
