@@ -20,6 +20,7 @@ data class LoginScreenState(
 
 sealed class LoginScreenEvent {
     data class DoLogin(val loginType: LoginType) : LoginScreenEvent()
+    data object OnCreateAccount : LoginScreenEvent()
     data class LoginSuccess(val userData: UserData) : LoginScreenEvent()
     data class LoginFailed(val message: String?) : LoginScreenEvent()
 }

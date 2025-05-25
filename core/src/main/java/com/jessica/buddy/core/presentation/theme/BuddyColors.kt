@@ -15,4 +15,5 @@ data class BuddyColors(
     val progress: Color = Color.Unspecified,
     val disabled: Color = Color.Unspecified,
     val neutral: Color = Color.Unspecified,
+    val white: Color = Color.White
 )

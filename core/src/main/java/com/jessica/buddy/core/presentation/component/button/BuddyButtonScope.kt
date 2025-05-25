@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.jessica.buddy.core.presentation.theme.BuddyTheme
@@ -25,12 +26,12 @@ class BuddyButtonScope(
             is ButtonType.Elevated -> BuddyTheme.typography.buttonLarge
         }
         val paddingTop = when (buttonType) {
-            is ButtonType.Default, is ButtonType.Outlined -> 4.5.dp
-            is ButtonType.Elevated -> 5.5.dp
+            is ButtonType.Default, is ButtonType.Outlined -> 5.5.dp
+            is ButtonType.Elevated -> 6.5.dp
         }
         val paddingBottom = when (buttonType) {
-            is ButtonType.Default, is ButtonType.Outlined -> 2.dp
-            is ButtonType.Elevated -> 3.dp
+            is ButtonType.Default, is ButtonType.Outlined -> 3.dp
+            is ButtonType.Elevated -> 4.dp
         }
         androidx.compose.material3.Text(
             text = text,
@@ -43,9 +44,11 @@ class BuddyButtonScope(
     fun Icon(
         @DrawableRes resId: Int,
         modifier: Modifier = Modifier,
+        tint: Color = Color.Unspecified,
     ) {
         androidx.compose.material3.Icon(
             painter = painterResource(resId),
+            tint = tint,
             modifier = modifier,
             contentDescription = ""
         )
