@@ -3,6 +3,7 @@ package com.jessica.buddy.auth.presentation.screen.login
 import androidx.lifecycle.ViewModel
 import com.jessica.buddy.auth.presentation.screen.login.handler.LoginHandler
 import com.jessica.buddy.core.data.model.UserData
+import com.jessica.buddy.core.presentation.navigation.NavigationEvent
 import org.koin.android.annotation.KoinViewModel
 import org.orbitmvi.orbit.Container
 import org.orbitmvi.orbit.ContainerHost
@@ -23,6 +24,7 @@ sealed class LoginScreenEvent {
     data object OnCreateAccount : LoginScreenEvent()
     data class LoginSuccess(val userData: UserData) : LoginScreenEvent()
     data class LoginFailed(val message: String?) : LoginScreenEvent()
+    data object NavigateToHome : LoginScreenEvent(), NavigationEvent
 }
 
 @KoinViewModel

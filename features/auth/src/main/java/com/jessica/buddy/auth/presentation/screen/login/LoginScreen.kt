@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -64,37 +65,39 @@ fun LoginScreen(
     modifier: Modifier = Modifier,
     onEvent: (LoginScreenEvent) -> Unit
 ) {
-    Box(modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(
-                    BuddyTheme.colors.white
-                )
-        ) {
-            Text(
-                "Buddy",
-                style = BuddyTheme.typography.brandLarge,
-                color = BuddyTheme.colors.primary,
+    Scaffold(modifier) {
+        Box(Modifier.padding(it), contentAlignment = Alignment.Center) {
+            Column(
                 modifier = Modifier
-                    .fillMaxWidth()
+                    .fillMaxSize()
                     .background(
-                        BuddyTheme.colors.background
+                        BuddyTheme.colors.white
                     )
-                    .padding(vertical = 100.dp),
-                textAlign = TextAlign.Center
-            )
-            MainSignInMenu(
-                onEvent = onEvent,
-                modifier = Modifier
-                    .padding(16.dp)
-                    .padding(bottom = 80.dp)
-            )
-            SignInSeparator(modifier = Modifier.padding(bottom = 16.dp))
-            SocialSignInMenu(onEvent = onEvent, modifier = Modifier.padding(16.dp))
-        }
-        AnimatedVisibility(state.isLoading, modifier = Modifier.size(100.dp)) {
-            CircularProgressIndicator()
+            ) {
+                Text(
+                    "Buddy",
+                    style = BuddyTheme.typography.brandLarge,
+                    color = BuddyTheme.colors.primary,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(
+                            BuddyTheme.colors.background
+                        )
+                        .padding(vertical = 100.dp),
+                    textAlign = TextAlign.Center
+                )
+                MainSignInMenu(
+                    onEvent = onEvent,
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .padding(bottom = 80.dp)
+                )
+                SignInSeparator(modifier = Modifier.padding(bottom = 16.dp))
+                SocialSignInMenu(onEvent = onEvent, modifier = Modifier.padding(16.dp))
+            }
+            AnimatedVisibility(state.isLoading, modifier = Modifier.size(100.dp)) {
+                CircularProgressIndicator()
+            }
         }
     }
 }

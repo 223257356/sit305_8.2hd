@@ -28,6 +28,7 @@
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/features" />
             <option value="$PROJECT_DIR$/features/auth" />
+            <option value="$PROJECT_DIR$/features/home" />
             <option value="$PROJECT_DIR$/sjy-build-logic" />
             <option value="$PROJECT_DIR$/sjy-build-logic/buildlogic" />
           </set>

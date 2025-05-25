@@ -10,6 +10,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.jessica.buddy.app.presentation.navigation.BuddyNavGraph
 import com.jessica.buddy.core.presentation.theme.BuddyTheme
 import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.generated.app.destinations.MainScreenDestination
 import com.ramcosta.composedestinations.generated.app.navgraphs.BuddyGraph
 import com.ramcosta.composedestinations.generated.auth.destinations.LoginScreenDestination
 import org.koin.androidx.compose.koinViewModel
@@ -32,7 +33,7 @@ fun SplashScreen(
                 }
 
             SplashScreenEvent.NavigateToHome ->
-                navigator.navigate(LoginScreenDestination) {
+                navigator.navigate(MainScreenDestination) {
                     popUpTo(BuddyGraph.startRoute) {
                         inclusive = true
                     }

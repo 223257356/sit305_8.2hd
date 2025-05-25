@@ -1,16 +1,16 @@
 plugins {
-    id("com.sanjaya.buildlogic.app")
+    id("com.sanjaya.buildlogic.lib")
     id("com.sanjaya.buildlogic.compose")
 }
 
 android {
-    namespace = "com.jessica.buddy.app"
-
+    namespace = "com.jessica.buddy.home"
     defaultConfig {
-        applicationId = "com.jessica.buddy.app"
-        versionCode = libs.versions.version.code.get().toInt()
-        versionName = libs.versions.version.name.get()
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
+    }
+    buildFeatures {
+        buildConfig = true
     }
     buildTypes {
         release {
@@ -25,6 +25,4 @@ android {
 
 dependencies {
     implementation(project(":core"))
-    implementation(project(":features:auth"))
-    implementation(project(":features:home"))
 }
