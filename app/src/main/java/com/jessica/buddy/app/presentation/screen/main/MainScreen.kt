@@ -17,9 +17,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.jessica.buddy.app.presentation.navigation.BuddyNavGraph
+import com.jessica.buddy.article.presentation.screen.CollectionScreen
 import com.jessica.buddy.core.presentation.component.header.BuddyHeader
 import com.jessica.buddy.core.presentation.theme.BuddyTheme
 import com.jessica.buddy.home.presentation.screen.home.HomeScreen
+import com.jessica.buddy.profile.presentation.screen.ProfileScreen
 import com.ramcosta.composedestinations.annotation.Destination
 import org.koin.androidx.compose.koinViewModel
 import org.orbitmvi.orbit.compose.collectAsState
@@ -76,7 +78,11 @@ private fun MainScreenContent(
             targetState = state.selectedPosition,
             modifier = Modifier.padding(it)
         ) { position ->
-            HomeScreen()
+            when (position) {
+                2 -> CollectionScreen()
+                3 -> ProfileScreen()
+                else -> HomeScreen()
+            }
         }
     }
 }

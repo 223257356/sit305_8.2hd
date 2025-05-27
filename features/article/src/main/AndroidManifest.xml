@@ -9,7 +9,7 @@
             android:exported="false"
             tools:node="merge">
             <meta-data
-                android:name="com.jessica.buddy.home.presentation.initializer.HomeModuleInitializer"
+                android:name="com.jessica.buddy.article.presentation.initializer.ArticleModuleInitializer"
                 android:value="androidx.startup" />
         </provider>
     </application>

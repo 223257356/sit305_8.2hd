@@ -34,3 +34,5 @@ dependencyResolutionManagement {
 rootProject.name = "Buddy"
 include(":app", ":core", ":features:auth")
 include(":features:home")
+include(":features:article")
+include(":features:profile")

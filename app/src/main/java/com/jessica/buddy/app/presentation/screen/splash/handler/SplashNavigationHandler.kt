@@ -1,13 +1,13 @@
 package com.jessica.buddy.app.presentation.screen.splash.handler
 
 import com.jessica.buddy.app.presentation.screen.splash.SplashScreenEvent
-import com.jessica.buddy.core.data.local.user.UserPrefGateway
+import com.jessica.buddy.core.data.local.user.UserLocalDataSource
 import org.koin.core.annotation.Factory
 import org.orbitmvi.orbit.syntax.Syntax
 
 @Factory
 class SplashNavigationHandler(
-    private val userPrefGateway: UserPrefGateway
+    private val userPrefGateway: UserLocalDataSource
 ) {
     suspend fun checkNavigation(
         syntax: Syntax<Unit, SplashScreenEvent>,

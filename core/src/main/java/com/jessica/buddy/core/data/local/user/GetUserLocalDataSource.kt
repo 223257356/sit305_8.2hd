@@ -1,21 +1,21 @@
 package com.jessica.buddy.core.data.local.user
 
-import com.jessica.buddy.core.data.local.LocalPrefGateway
+import com.jessica.buddy.core.data.local.LocalDataSource
 import com.jessica.buddy.core.data.model.UserData
 import com.jessica.buddy.core.domain.util.DomainConstant
 import kotlinx.serialization.json.Json
 
-interface GetUserDataGateway {
+interface GetUserLocalDataSource {
     fun getUserData(): Result<UserData>
 }
 
-internal class GetUserDataGatewayImpl(
-    private val localPrefGateway: LocalPrefGateway,
+internal class GetUserLocalDataSourceImpl(
+    private val localDataSource: LocalDataSource,
     private val json: Json
-) : GetUserDataGateway {
+) : GetUserLocalDataSource {
     override fun getUserData(): Result<UserData> {
         return runCatching {
-            val rawData = localPrefGateway.getString(
+            val rawData = localDataSource.getString(
                 /* key = */
                 DomainConstant.USER_DATA_PREF_KEY,
                 /* defValue = */

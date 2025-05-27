@@ -19,7 +19,7 @@
         <option name="testRunner" value="CHOOSE_PER_TEST" />
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="$USER_HOME$/.sdkman/candidates/gradle/current" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../scoop/apps/gradle-bin/current" />
         <option name="gradleJvm" value="STUDIO_GRADLE_JDK" />
         <option name="modules">
           <set>
@@ -27,8 +27,10 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/features" />
+            <option value="$PROJECT_DIR$/features/article" />
             <option value="$PROJECT_DIR$/features/auth" />
             <option value="$PROJECT_DIR$/features/home" />
+            <option value="$PROJECT_DIR$/features/profile" />
             <option value="$PROJECT_DIR$/sjy-build-logic" />
             <option value="$PROJECT_DIR$/sjy-build-logic/buildlogic" />
           </set>
