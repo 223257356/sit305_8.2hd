@@ -1,4 +1,4 @@
-package com.jessica.buddy.article.data.local.favorite
+package com.jessica.buddy.article.data.favorite.local
 
 import com.jessica.buddy.core.data.local.LocalDataSource
 import kotlinx.serialization.json.Json

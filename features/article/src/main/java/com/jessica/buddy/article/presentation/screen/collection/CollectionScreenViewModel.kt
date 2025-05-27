@@ -1,8 +1,8 @@
 package com.jessica.buddy.article.presentation.screen.collection
 
 import androidx.lifecycle.ViewModel
-import com.jessica.buddy.article.data.local.favorite.FavArticleLocalDataSource
-import com.jessica.buddy.article.data.model.ArticleData
+import com.jessica.buddy.article.data.favorite.local.FavArticleLocalDataSource
+import com.jessica.buddy.article.data.article.model.ArticleData
 import org.koin.android.annotation.KoinViewModel
 import org.orbitmvi.orbit.Container
 import org.orbitmvi.orbit.ContainerHost

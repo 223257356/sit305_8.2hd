@@ -1,4 +1,4 @@
-package com.jessica.buddy.article.data.model
+package com.jessica.buddy.article.data.article.model
 
 import kotlinx.serialization.Serializable
 

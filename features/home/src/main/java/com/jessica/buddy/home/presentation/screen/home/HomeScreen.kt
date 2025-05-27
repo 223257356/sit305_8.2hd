@@ -19,9 +19,11 @@ import com.jessica.buddy.core.presentation.theme.BuddyTheme
 import com.jessica.buddy.home.presentation.component.DailyReadsProvider
 import com.jessica.buddy.home.presentation.navigation.HomeGraph
 import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.generated.home.destinations.CheckInScreenDestination
 import org.koin.androidx.compose.koinViewModel
 import org.koin.compose.koinInject
 import org.orbitmvi.orbit.compose.collectAsState
+import org.orbitmvi.orbit.compose.collectSideEffect
 
 @Destination<HomeGraph>(start = true)
 @Composable
@@ -31,6 +33,15 @@ fun HomeScreen(
     dailyReadsProvider: DailyReadsProvider = koinInject()
 ) {
     val state = viewModel.collectAsState().value
+    val navigator = BuddyTheme.navigator
+    viewModel.collectSideEffect {
+        when (it) {
+            is HomeScreenEvent.ShowCheckInPage -> {
+                navigator.navigate(CheckInScreenDestination)
+            }
+            else -> Unit
+        }
+    }
     HomeScreenContent(state, modifier) {
         dailyReadsProvider.Content(Modifier)
     }

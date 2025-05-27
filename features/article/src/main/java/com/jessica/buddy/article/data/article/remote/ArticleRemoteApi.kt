@@ -1,6 +1,6 @@
-package com.jessica.buddy.article.data.remote
+package com.jessica.buddy.article.data.article.remote
 
-import com.jessica.buddy.article.data.model.ArticleData
+import com.jessica.buddy.article.data.article.model.ArticleData
 import de.jensklingenberg.ktorfit.Ktorfit
 import de.jensklingenberg.ktorfit.http.GET
 import de.jensklingenberg.ktorfit.http.Query

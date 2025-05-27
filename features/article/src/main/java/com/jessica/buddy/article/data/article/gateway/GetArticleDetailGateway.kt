@@ -1,8 +1,8 @@
-package com.jessica.buddy.article.data.gateway
+package com.jessica.buddy.article.data.article.gateway
 
-import com.jessica.buddy.article.data.local.favorite.FavArticleLocalDataSource
-import com.jessica.buddy.article.data.model.ArticleData
-import com.jessica.buddy.article.data.remote.ArticleRemoteApi
+import com.jessica.buddy.article.data.favorite.local.FavArticleLocalDataSource
+import com.jessica.buddy.article.data.article.model.ArticleData
+import com.jessica.buddy.article.data.article.remote.ArticleRemoteApi
 
 interface GetArticleDetailGateway {
     suspend fun getArticleDetail(id: String): ArticleData

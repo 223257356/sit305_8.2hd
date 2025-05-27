@@ -1,11 +1,11 @@
-package com.jessica.buddy.article.data
+package com.jessica.buddy.article.data.article
 
-import com.jessica.buddy.article.data.gateway.GetArticleDetailGateway
-import com.jessica.buddy.article.data.gateway.GetArticleDetailGatewayImpl
-import com.jessica.buddy.article.data.gateway.GetDailyReadsGateway
-import com.jessica.buddy.article.data.gateway.GetDailyReadsGatewayImpl
-import com.jessica.buddy.article.data.local.favorite.FavArticleLocalDataSource
-import com.jessica.buddy.article.data.remote.ArticleRemoteApi
+import com.jessica.buddy.article.data.article.gateway.GetArticleDetailGateway
+import com.jessica.buddy.article.data.article.gateway.GetArticleDetailGatewayImpl
+import com.jessica.buddy.article.data.article.gateway.GetDailyReadsGateway
+import com.jessica.buddy.article.data.article.gateway.GetDailyReadsGatewayImpl
+import com.jessica.buddy.article.data.favorite.local.FavArticleLocalDataSource
+import com.jessica.buddy.article.data.article.remote.ArticleRemoteApi
 import org.koin.core.annotation.Single
 
 interface ArticleRepository : GetDailyReadsGateway, GetArticleDetailGateway
