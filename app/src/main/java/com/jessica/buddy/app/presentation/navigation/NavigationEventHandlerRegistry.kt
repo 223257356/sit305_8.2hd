@@ -3,6 +3,7 @@ package com.jessica.buddy.app.presentation.navigation
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import com.jessica.buddy.app.presentation.navigation.handler.LoginScreenNavigationHandler
+import com.jessica.buddy.app.presentation.navigation.handler.ProfileScreenNavigationHandler
 import com.jessica.buddy.core.presentation.navigation.NavigationEvent
 import com.jessica.buddy.core.presentation.navigation.NavigationEventBus
 import com.jessica.buddy.core.presentation.theme.BuddyTheme
@@ -17,7 +18,8 @@ class NavigationEventHandlerRegistry(
     @InjectedParam navigator: DestinationsNavigator
 ) {
     private val handlers = listOf(
-        LoginScreenNavigationHandler(navigator)
+        LoginScreenNavigationHandler(navigator),
+        ProfileScreenNavigationHandler(navigator)
     )
 
     fun handle(event: NavigationEvent) {

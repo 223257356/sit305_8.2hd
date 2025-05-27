@@ -8,6 +8,7 @@ import kotlinx.serialization.json.Json
 
 interface SetUserLocalDataSource {
     fun setUserData(userData: UserData)
+    fun clearUserData()
 }
 
 internal class SetUserLocalDataSourceImpl(
@@ -18,6 +19,12 @@ internal class SetUserLocalDataSourceImpl(
         val jsonString = json.encodeToString(userData)
         localDataSource.edit {
             putString(DomainConstant.USER_DATA_PREF_KEY, jsonString)
+        }
+    }
+
+    override fun clearUserData() {
+        localDataSource.edit {
+            remove(DomainConstant.USER_DATA_PREF_KEY)
         }
     }
 }
