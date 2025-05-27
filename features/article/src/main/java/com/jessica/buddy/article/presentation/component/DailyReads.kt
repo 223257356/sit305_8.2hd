@@ -18,14 +18,13 @@ fun DailyReads(
     viewModel: DailyReadsViewModel = koinViewModel()
 ) {
     val state = viewModel.collectAsState().value
-    DailyReadsContent(state, modifier, viewModel::onEvent)
+    DailyReadsContent(state, modifier)
 }
 
 @Composable
 private fun DailyReadsContent(
     state: DailyReadsState,
-    modifier: Modifier = Modifier,
-    onEvent: (DailyReadsUiEvent) -> Unit = {}
+    modifier: Modifier = Modifier
 ) {
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(14.dp)) {
         Text(
@@ -34,10 +33,7 @@ private fun DailyReadsContent(
             color = BuddyTheme.colors.primary,
         )
         state.articles.forEach {
-            ArticleCard(
-                data = it,
-                onEvent = onEvent
-            )
+            ArticleCard(data = it)
         }
     }
 }

@@ -21,7 +21,9 @@ internal class GetFavArticleLocalDataSourceImpl(
                 /* defValue = */
                 null
             ).orEmpty()
-            json.decodeFromString(rawData)
+            json.decodeFromString<List<ArticleData>>(rawData).filter {
+                it.isFavorite
+            }
         }
     }
 }

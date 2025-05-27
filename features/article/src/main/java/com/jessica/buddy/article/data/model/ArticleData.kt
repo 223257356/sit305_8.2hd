@@ -1,9 +1,13 @@
 package com.jessica.buddy.article.data.model
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class ArticleData(
     val id: String,
     val imageUrl: String,
     val title: String,
+    val authorImage: String,
     val author: String,
     val date: String,
     val content: String,
@@ -20,6 +24,9 @@ data class ArticleData(
                 content = "A consistent morning routine helps boost " +
                     "productivity and mental clarity. Learn how to " +
                     "design one that suits your lifestyle.",
+                authorImage = "https://static.vecteezy.com/system/resources/previews/036/280/650/" +
+                    "non_2x/default-avatar-profile-icon-social-media-user-image-gray-avatar-" +
+                    "icon-blank-profile-silhouette-illustration-vector.jpg",
                 isFavorite = false
             ),
             ArticleData(
@@ -31,6 +38,9 @@ data class ArticleData(
                 content = "Practicing daily gratitude can increase " +
                     "happiness and improve relationships. " +
                     "Discover easy ways to make it a habit.",
+                authorImage = "https://static.vecteezy.com/system/resources/previews/036/280/650/" +
+                    "non_2x/default-avatar-profile-icon-social-media-user-image-gray-avatar-" +
+                    "icon-blank-profile-silhouette-illustration-vector.jpg",
                 isFavorite = false
             ),
             ArticleData(
@@ -42,6 +52,9 @@ data class ArticleData(
                 content = "Reading just 20 minutes a day stimulates " +
                     "the mind, reduces stress, and builds knowledge. " +
                     "Here's how to make it stick.",
+                authorImage = "https://static.vecteezy.com/system/resources/previews/036/280/650/" +
+                    "non_2x/default-avatar-profile-icon-social-media-user-image-gray-avatar-" +
+                    "icon-blank-profile-silhouette-illustration-vector.jpg",
                 isFavorite = false
             ),
             ArticleData(
@@ -53,6 +66,9 @@ data class ArticleData(
                 content = "Staying hydrated is essential for health " +
                     "and energy. Learn how to build a water-drinking " +
                     "habit without effort.",
+                authorImage = "https://static.vecteezy.com/system/resources/previews/036/280/650/" +
+                    "non_2x/default-avatar-profile-icon-social-media-user-image-gray-avatar-" +
+                    "icon-blank-profile-silhouette-illustration-vector.jpg",
                 isFavorite = false
             ),
             ArticleData(
@@ -64,6 +80,9 @@ data class ArticleData(
                 content = "Too much screen time? A digital detox " +
                     "habit can help you regain clarity and " +
                     "mental space. Start small and grow.",
+                authorImage = "https://static.vecteezy.com/system/resources/previews/036/280/650/" +
+                    "non_2x/default-avatar-profile-icon-social-media-user-image-gray-avatar-" +
+                    "icon-blank-profile-silhouette-illustration-vector.jpg",
                 isFavorite = false
             ),
             ArticleData(
@@ -75,6 +94,9 @@ data class ArticleData(
                 content = "A cleaner space equals a clearer mind. " +
                     "The 10-minute tidy habit helps you stay " +
                     "organized without feeling overwhelmed.",
+                authorImage = "https://static.vecteezy.com/system/resources/previews/036/280/650/" +
+                    "non_2x/default-avatar-profile-icon-social-media-user-image-gray-avatar-" +
+                    "icon-blank-profile-silhouette-illustration-vector.jpg",
                 isFavorite = false
             ),
             ArticleData(
@@ -86,6 +108,9 @@ data class ArticleData(
                 content = "Journaling is a powerful tool for " +
                     "self-reflection and growth. " +
                     "Here’s how to build it into your daily life.",
+                authorImage = "https://static.vecteezy.com/system/resources/previews/036/280/650/" +
+                    "non_2x/default-avatar-profile-icon-social-media-user-image-gray-avatar-" +
+                    "icon-blank-profile-silhouette-illustration-vector.jpg",
                 isFavorite = false
             ),
             ArticleData(
@@ -97,6 +122,9 @@ data class ArticleData(
                 content = "Walking daily improves physical " +
                     "and mental health. Learn how to " +
                     "incorporate walks into even the busiest schedule.",
+                authorImage = "https://static.vecteezy.com/system/resources/previews/036/280/650/" +
+                    "non_2x/default-avatar-profile-icon-social-media-user-image-gray-avatar-" +
+                    "icon-blank-profile-silhouette-illustration-vector.jpg",
                 isFavorite = false
             ),
             ArticleData(
@@ -108,6 +136,9 @@ data class ArticleData(
                 content = "Saying no is a powerful habit that " +
                     "protects your energy and priorities. " +
                     "Learn how to set boundaries with confidence.",
+                authorImage = "https://static.vecteezy.com/system/resources/previews/036/280/650/" +
+                    "non_2x/default-avatar-profile-icon-social-media-user-image-gray-avatar-" +
+                    "icon-blank-profile-silhouette-illustration-vector.jpg",
                 isFavorite = false
             ),
             ArticleData(
@@ -119,6 +150,9 @@ data class ArticleData(
                 content = "A nightly reflection habit brings " +
                     "closure, gratitude, and awareness." +
                     " Discover simple steps to begin tonight.",
+                authorImage = "https://static.vecteezy.com/system/resources/previews/036/280/650/" +
+                    "non_2x/default-avatar-profile-icon-social-media-user-image-gray-avatar-" +
+                    "icon-blank-profile-silhouette-illustration-vector.jpg",
                 isFavorite = false
             )
         )

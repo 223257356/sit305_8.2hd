@@ -23,18 +23,19 @@ import coil3.compose.AsyncImage
 import com.jessica.buddy.article.R
 import com.jessica.buddy.article.data.model.ArticleData
 import com.jessica.buddy.core.presentation.theme.BuddyTheme
+import com.ramcosta.composedestinations.generated.article.destinations.ArticleDetailScreenDestination
 
 @Composable
 fun ArticleCard(
     data: ArticleData,
-    modifier: Modifier = Modifier,
-    onEvent: (DailyReadsUiEvent) -> Unit = {}
+    modifier: Modifier = Modifier
 ) {
+    val navigator = BuddyTheme.navigator
     Surface(
         modifier = modifier
             .fillMaxWidth()
             .clickable {
-                onEvent(DailyReadsUiEvent.ArticleClick(data))
+                navigator.navigate(ArticleDetailScreenDestination(data.id))
             },
         shape = RoundedCornerShape(15.dp)
     ) {

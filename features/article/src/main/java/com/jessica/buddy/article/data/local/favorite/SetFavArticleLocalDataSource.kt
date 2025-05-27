@@ -19,8 +19,9 @@ internal class SetFavArticleLocalDataSourceImpl(
         val currentFav = getFavArticleLocalDataSource.getFavoriteArticle()
             .getOrDefault(emptyList())
             .toMutableList()
+        currentFav.removeIf { it.id == article.id }
         currentFav.add(article)
-        val rawJson = json.encodeToString(currentFav.distinctBy { it.id })
+        val rawJson = json.encodeToString(currentFav)
         localDataSource.edit { putString(KEY_FAV_ARTICLE, rawJson) }
     }
 }

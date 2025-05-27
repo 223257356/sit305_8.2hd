@@ -1,4 +1,4 @@
-package com.jessica.buddy.article.presentation.screen
+package com.jessica.buddy.article.presentation.screen.collection
 
 import androidx.lifecycle.ViewModel
 import com.jessica.buddy.article.data.local.favorite.FavArticleLocalDataSource

@@ -12,12 +12,13 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.jessica.buddy.app.presentation.navigation.BuddyNavGraph
-import com.jessica.buddy.article.presentation.screen.CollectionScreen
+import com.jessica.buddy.article.presentation.screen.collection.CollectionScreen
 import com.jessica.buddy.core.presentation.component.header.BuddyHeader
 import com.jessica.buddy.core.presentation.theme.BuddyTheme
 import com.jessica.buddy.home.presentation.screen.home.HomeScreen
@@ -42,8 +43,17 @@ private fun MainScreenContent(
     modifier: Modifier = Modifier,
     onEvent: (MainScreenEvent) -> Unit = {}
 ) {
+    val title = remember(state.selectedPosition) {
+        when (state.selectedPosition) {
+            0 -> "Home"
+            1 -> "Journaling"
+            2 -> "Collection"
+            3 -> "Profile"
+            else -> "Buddy"
+        }
+    }
     Scaffold(modifier.background(BuddyTheme.colors.background), topBar = {
-        BuddyHeader("Buddy")
+        BuddyHeader(title)
     }, bottomBar = {
         Column {
             HorizontalDivider(

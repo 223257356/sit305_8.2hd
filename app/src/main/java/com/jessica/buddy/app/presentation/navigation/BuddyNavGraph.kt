@@ -3,6 +3,7 @@ package com.jessica.buddy.app.presentation.navigation
 import com.jessica.buddy.core.presentation.navigation.BuddyHostNavigationStyle
 import com.ramcosta.composedestinations.annotation.ExternalNavGraph
 import com.ramcosta.composedestinations.annotation.NavHostGraph
+import com.ramcosta.composedestinations.generated.article.navgraphs.ArticleNavGraph
 import com.ramcosta.composedestinations.generated.auth.navgraphs.AuthNavGraph
 import com.ramcosta.composedestinations.generated.home.navgraphs.HomeNavGraph
 
@@ -11,5 +12,6 @@ annotation class BuddyNavGraph {
 
     @ExternalNavGraph<AuthNavGraph>
     @ExternalNavGraph<HomeNavGraph>
+    @ExternalNavGraph<ArticleNavGraph>
     companion object Includes
 }

@@ -1,4 +1,4 @@
-package com.jessica.buddy.article.presentation.screen
+package com.jessica.buddy.article.presentation.screen.collection
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.foundation.layout.Arrangement
