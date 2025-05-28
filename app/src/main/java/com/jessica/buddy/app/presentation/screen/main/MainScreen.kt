@@ -19,6 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.jessica.buddy.app.presentation.navigation.BuddyNavGraph
 import com.jessica.buddy.article.presentation.screen.collection.CollectionScreen
+import com.jessica.buddy.chat.presentation.screen.ChatScreen
 import com.jessica.buddy.core.presentation.component.header.BuddyHeader
 import com.jessica.buddy.core.presentation.theme.BuddyTheme
 import com.jessica.buddy.home.presentation.screen.home.HomeScreen
@@ -46,7 +47,7 @@ private fun MainScreenContent(
     val title = remember(state.selectedPosition) {
         when (state.selectedPosition) {
             0 -> "Home"
-            1 -> "Journaling"
+            1 -> "Chat"
             2 -> "Collection"
             3 -> "Profile"
             else -> "Buddy"
@@ -89,6 +90,7 @@ private fun MainScreenContent(
             modifier = Modifier.padding(it)
         ) { position ->
             when (position) {
+                1 -> ChatScreen()
                 2 -> CollectionScreen()
                 3 -> ProfileScreen()
                 else -> HomeScreen()

@@ -29,4 +29,5 @@ dependencies {
     implementation(project(":features:home"))
     implementation(project(":features:article"))
     implementation(project(":features:profile"))
+    implementation(project(":features:chat"))
 }

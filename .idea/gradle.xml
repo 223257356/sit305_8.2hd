@@ -29,6 +29,7 @@
             <option value="$PROJECT_DIR$/features" />
             <option value="$PROJECT_DIR$/features/article" />
             <option value="$PROJECT_DIR$/features/auth" />
+            <option value="$PROJECT_DIR$/features/chat" />
             <option value="$PROJECT_DIR$/features/home" />
             <option value="$PROJECT_DIR$/features/profile" />
             <option value="$PROJECT_DIR$/sjy-build-logic" />
