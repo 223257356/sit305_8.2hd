@@ -24,7 +24,7 @@ internal class SetUserLocalDataSourceImpl(
 
     override fun clearUserData() {
         localDataSource.edit {
-            remove(DomainConstant.USER_DATA_PREF_KEY)
+            clear()
         }
     }
 }
